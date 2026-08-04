@@ -38,6 +38,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0234-palindrome-linked-list](https://github.com/awasi8475902774-oss/Competitive_Coding_unit1/tree/master/0234-palindrome-linked-list) |
+| [0328-odd-even-linked-list](https://github.com/awasi8475902774-oss/Competitive_Coding_unit1/tree/master/0328-odd-even-linked-list) |
 ## Two Pointers
 |  |
 | ------- |
