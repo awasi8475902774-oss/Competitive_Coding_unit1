@@ -1,0 +1,43 @@
+                              Brute Force
+ class Solution {
+    public ListNode oddEvenList(ListNode head) {
+        if (head == null) return null;
+
+        ListNode oddDummy = new ListNode(0);
+        ListNode evenDummy = new ListNode(0);
+
+        ListNode oddTail = oddDummy;
+        ListNode evenTail = evenDummy;
+
+        ListNode curr = head;
+        int pos = 1;
+
+        while (curr != null) {
+            if (pos % 2 == 1) {
+                oddTail.next = new ListNode(curr.val);
+                oddTail = oddTail.next;
+            } else {
+                evenTail.next = new ListNode(curr.val);
+                evenTail = evenTail.next;
+            }
+
+            curr = curr.next;
+            pos++;
+        }
+
+        oddTail.next = evenDummy.next;
+        return oddDummy.next;
+    }
+}
+
+                            Intuition
+A simple approach is to create two separate linked lists:
+One list stores all nodes at odd positions.
+The other list stores all nodes at even positions.
+Traverse the original linked list while keeping track of the current position.
+Append each node's value to the appropriate list.
+After the traversal is complete, connect the odd list to the beginning of the even list.
+This approach is easy to understand but creates new nodes, requiring additional memory.
+
+                          Time Complexity
+Time Complexity: O(n)
