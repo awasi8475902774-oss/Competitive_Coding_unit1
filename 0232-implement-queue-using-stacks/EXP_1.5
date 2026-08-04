@@ -1,0 +1,74 @@
+                          Brute Force
+                          import java.util.Stack;
+
+class MyQueue {
+    private Stack<Integer> input;
+    private Stack<Integer> temp;
+
+    public MyQueue() {
+        input = new Stack<>();
+        temp = new Stack<>();
+    }
+
+    public void push(int x) {
+        input.push(x);
+    }
+
+    public int pop() {
+        // Move all elements to temp
+        while (!input.isEmpty()) {
+            temp.push(input.pop());
+        }
+
+        // Remove front element
+        int front = temp.pop();
+
+        // Move remaining elements back
+        while (!temp.isEmpty()) {
+            input.push(temp.pop());
+        }
+
+        return front;
+    }
+
+    public int peek() {
+        // Move all elements to temp
+        while (!input.isEmpty()) {
+            temp.push(input.pop());
+        }
+
+        // Get front element
+        int front = temp.peek();
+
+        // Move elements back
+        while (!temp.isEmpty()) {
+            input.push(temp.pop());
+        }
+
+        return front;
+    }
+
+    public boolean empty() {
+        return input.isEmpty();
+    }
+}
+
+
+                          Intuition
+Instead of transferring elements every time a pop() or peek() operation is performed, the optimized solution transfers elements only when necessary.
+Two stacks are maintained:
+input stack → stores newly inserted elements.
+output stack → provides queue elements in FIFO order.
+Every push() operation simply inserts the element into the input stack.
+When pop() or peek() is called:
+If the output stack already contains elements, use it directly.
+If the output stack is empty, move all elements once from the input stack to the output stack.
+This reversal makes the oldest inserted element appear on the top of the output stack, preserving queue order.
+Subsequent pop() and peek() operations use the output stack without any additional transfers until it becomes empty again.
+
+
+                    Time Complexity
+push()	=> O(1)
+pop() =>	O(n)
+peek() =>	O(n)
+empty() =>	O(1)
