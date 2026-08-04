@@ -1,0 +1,35 @@
+                            Brute Force
+class Solution {
+    public int largestRectangleArea(int[] heights) {
+        int n = heights.length;
+        int maxArea = 0;
+
+        for (int i = 0; i < n; i++) {
+            int minHeight = heights[i];
+
+            for (int j = i; j < n; j++) {
+                minHeight = Math.min(minHeight, heights[j]);
+                int width = j - i + 1;
+                int area = minHeight * width;
+                maxArea = Math.max(maxArea, area);
+            }
+        }
+
+        return maxArea;
+    }
+}
+
+
+              Intuition
+The simplest approach is to consider every possible rectangle in the histogram.
+Treat each index as the starting point of a rectangle.
+Extend the rectangle one bar at a time towards the right.
+While extending, continuously maintain the minimum height among all bars included in the current rectangle.
+Since the rectangle's height is limited by the shortest bar, calculate:
+Width = number of bars included
+Area = minimum height × width
+Compare the calculated area with the maximum area obtained so far.
+By checking all possible subarrays of the histogram, the algorithm guarantees finding the largest rectangle, but it performs many repeated calculations.
+
+            Time Complexity
+O(n)
