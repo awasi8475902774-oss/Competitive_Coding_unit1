@@ -1,0 +1,22 @@
+                       1.Brute Force
+class Solution {
+    public boolean containsNearbyDuplicate(int[] nums, int k) {
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = i + 1; j <= i + k && j < nums.length; j++) {
+                if (nums[i] == nums[j]) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+}
+                  2.Intuition
+We only need to know whether the current element has appeared in the last k indices.
+Maintain a sliding window of size at most k using a HashSet.
+If the current element is already in the set, a duplicate exists within distance k, so return true.
+Otherwise, add the current element to the set.
+If the window size exceeds k, remove the element that is now outside the window (nums[i - k]).
+           
+                  3.Time Complexity
+Time Complexity: O(n)
