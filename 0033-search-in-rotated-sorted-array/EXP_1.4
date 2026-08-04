@@ -1,0 +1,26 @@
+                      Brute Force
+class Solution {
+    public int search(int[] nums, int target) {
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == target) {
+                return i;
+            }
+        }
+        return -1;
+    }
+}
+
+                    Intuition
+The array is sorted but rotated, so a normal Binary Search cannot always determine which side is sorted.
+Use a modified Binary Search:
+Find the middle element.
+If it is the target, return its index.
+Check whether the left half is sorted (nums[left] <= nums[mid]).
+If the target lies in this sorted half, search the left half.
+Otherwise, search the right half.
+Otherwise, the right half must be sorted.
+If the target lies in the sorted right half, search the right half.
+Otherwise, search the left half.
+
+              Time Complexity
+O(log n)
