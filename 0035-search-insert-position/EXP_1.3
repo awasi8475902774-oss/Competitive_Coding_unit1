@@ -1,0 +1,24 @@
+                    Brute Force
+class Solution {
+    public int searchInsert(int[] nums, int target) {
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] >= target) {
+                return i;
+            }
+        }
+        return nums.length;
+    }
+}
+
+                  Intuition
+Since the array is sorted, there is no need to check every element.
+Use Binary Search
+Find the middle element.
+If it is equal to the target, return its index.
+If the target is greater, search in the right half.
+If the target is smaller, search in the left half.
+If the target is not found, the variable left will point to the correct position where the target should be inserted while maintaining the sorted order.
+
+
+            Time Complexity
+Time Complexity: O(log n)
