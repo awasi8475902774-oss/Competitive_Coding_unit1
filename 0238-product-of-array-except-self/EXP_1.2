@@ -1,0 +1,30 @@
+                              Brute Force
+class Solution {
+    public int[] productExceptSelf(int[] nums) {
+        int n = nums.length;
+        int[] ans = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            int product = 1;
+            for (int j = 0; j < n; j++) {
+                if (i != j) {
+                    product *= nums[j];
+                }
+            }
+            ans[i] = product;
+        }
+
+        return ans;
+    }
+}
+
+                              Intuition
+Instead of recomputing the product for every index, we split the work into two passes.
+
+First pass (Left to Right): Store the product of all elements to the left of each index in the answer array.
+Second pass (Right to Left): Maintain the product of all elements to the right of each index and multiply it with the already stored left product.
+Thus, each position gets:
+Answer[i]=(Product of Left Elements)×(Product of Right Elements)
+
+                          Time Compleity
+Time Complexity: O(n)
