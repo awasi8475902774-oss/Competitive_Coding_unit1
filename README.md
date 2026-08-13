@@ -47,4 +47,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0234-palindrome-linked-list](https://github.com/awasi8475902774-oss/Competitive_Coding_unit1/tree/master/0234-palindrome-linked-list) |
+## Tree
+|  |
+| ------- |
+| [2236-root-equals-sum-of-children](https://github.com/awasi8475902774-oss/Competitive_Coding_unit1/tree/master/2236-root-equals-sum-of-children) |
+## Binary Tree
+|  |
+| ------- |
+| [2236-root-equals-sum-of-children](https://github.com/awasi8475902774-oss/Competitive_Coding_unit1/tree/master/2236-root-equals-sum-of-children) |
 <!---LeetCode Topics End-->
