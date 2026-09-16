@@ -6,6 +6,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0033-search-in-rotated-sorted-array](https://github.com/awasi8475902774-oss/Competitive_Coding_unit1/tree/master/0033-search-in-rotated-sorted-array) |
 | [0035-search-insert-position](https://github.com/awasi8475902774-oss/Competitive_Coding_unit1/tree/master/0035-search-insert-position) |
+| [0078-subsets](https://github.com/awasi8475902774-oss/Competitive_Coding_unit1/tree/master/0078-subsets) |
 | [0084-largest-rectangle-in-histogram](https://github.com/awasi8475902774-oss/Competitive_Coding_unit1/tree/master/0084-largest-rectangle-in-histogram) |
 ## Binary Search
 |  |
@@ -55,4 +56,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [2236-root-equals-sum-of-children](https://github.com/awasi8475902774-oss/Competitive_Coding_unit1/tree/master/2236-root-equals-sum-of-children) |
+## Backtracking
+|  |
+| ------- |
+| [0078-subsets](https://github.com/awasi8475902774-oss/Competitive_Coding_unit1/tree/master/0078-subsets) |
+## Bit Manipulation
+|  |
+| ------- |
+| [0078-subsets](https://github.com/awasi8475902774-oss/Competitive_Coding_unit1/tree/master/0078-subsets) |
 <!---LeetCode Topics End-->
